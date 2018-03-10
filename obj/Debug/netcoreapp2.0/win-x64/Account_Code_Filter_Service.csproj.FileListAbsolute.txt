@@ -1,0 +1,14 @@
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\win-x64\hostpolicy.dll
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\win-x64\hostfxr.dll
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\win-x64\Account_Code_Filter_Service.exe
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\win-x64\Accounts.txt
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\win-x64\Account_Code_Filter_Service.deps.json
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\win-x64\Account_Code_Filter_Service.runtimeconfig.json
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\win-x64\Account_Code_Filter_Service.runtimeconfig.dev.json
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\win-x64\Account_Code_Filter_Service.dll
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\win-x64\Account_Code_Filter_Service.pdb
+C:\dev\Account_Code_Filter_Service\obj\Debug\netcoreapp2.0\win-x64\Account_Code_Filter_Service.csproj.CoreCompileInputs.cache
+C:\dev\Account_Code_Filter_Service\obj\Debug\netcoreapp2.0\win-x64\Account_Code_Filter_Service.AssemblyInfoInputs.cache
+C:\dev\Account_Code_Filter_Service\obj\Debug\netcoreapp2.0\win-x64\Account_Code_Filter_Service.AssemblyInfo.cs
+C:\dev\Account_Code_Filter_Service\obj\Debug\netcoreapp2.0\win-x64\Account_Code_Filter_Service.dll
+C:\dev\Account_Code_Filter_Service\obj\Debug\netcoreapp2.0\win-x64\Account_Code_Filter_Service.pdb

@@ -1,0 +1,11 @@
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\Accounts.txt
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\Account_Code_Filter_Service.deps.json
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\Account_Code_Filter_Service.runtimeconfig.json
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\Account_Code_Filter_Service.runtimeconfig.dev.json
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\Account_Code_Filter_Service.dll
+C:\dev\Account_Code_Filter_Service\bin\Debug\netcoreapp2.0\Account_Code_Filter_Service.pdb
+C:\dev\Account_Code_Filter_Service\obj\Debug\netcoreapp2.0\Account_Code_Filter_Service.csproj.CoreCompileInputs.cache
+C:\dev\Account_Code_Filter_Service\obj\Debug\netcoreapp2.0\Account_Code_Filter_Service.AssemblyInfoInputs.cache
+C:\dev\Account_Code_Filter_Service\obj\Debug\netcoreapp2.0\Account_Code_Filter_Service.AssemblyInfo.cs
+C:\dev\Account_Code_Filter_Service\obj\Debug\netcoreapp2.0\Account_Code_Filter_Service.dll
+C:\dev\Account_Code_Filter_Service\obj\Debug\netcoreapp2.0\Account_Code_Filter_Service.pdb
