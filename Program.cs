@@ -14,8 +14,8 @@ namespace Account_Code_Filter_Service
 {
     public class Program
     {
-        public static int httpPort = 8080;
-        public static int httpsPort = 8443;
+        public static int httpPort = 80;
+        public static int httpsPort = 443;
         public static void Main(string[] args)
         {
             CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
