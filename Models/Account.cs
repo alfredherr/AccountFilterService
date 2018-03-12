@@ -6,6 +6,10 @@ namespace Account_Code_Filter_Service.Models
 {
     public class Account
     {
+        public Account()
+        {
+            
+        }
         public Account(string accountNumber, string accountCode)
         {
             AccountNumber = accountNumber;
