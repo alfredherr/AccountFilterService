@@ -26,19 +26,19 @@ namespace Account_Code_Filter_Service.Controllers
 
 
         [HttpGet]
-        public IEnumerable<Account> Get()
+        public AccountsResponse Get()
         {
-            var accounts = new List<Account>();
+            AccountsResponse accounts;
             try
             {
-                accounts =_db.GetAll().ToList();
+                accounts = new AccountsResponse(_db.GetAll());
             }
             catch (Exception e)
             {
                 _logger.LogError(e.StackTrace);
                 throw;
             }
-            return accounts.ToArray();
+            return accounts;
         }
 
 
