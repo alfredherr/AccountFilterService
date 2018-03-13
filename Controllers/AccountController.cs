@@ -18,9 +18,10 @@ namespace Account_Code_Filter_Service.Controllers
 
         public AccountController(IAccountRepository repo, ILogger<FilterController> logger)
         {
-            _db = (AccountRepository)repo;
+            _db = (AccountRepository) repo;
             _logger = logger;
         }
+
         [HttpGet]
         public AccountsResponse Get()
         {
@@ -36,10 +37,24 @@ namespace Account_Code_Filter_Service.Controllers
             }
             return accounts;
         }
+
         [HttpGet("{accountNumber}")]
         public Account Get(string accountNumber)
         {
             return _db.Find(accountNumber);
+        }
+
+        [HttpGet]
+        [Route("getbynumber")]
+        public Account GetWithParams([FromQuery(Name = "account")] string number)
+        {
+           
+            if (string.IsNullOrEmpty(number) || _db.Find(number) == null)
+            {
+                return new Account($"{number} not found", "", false);
+            }
+            return _db.Find(number);
+            
         }
     }
 }
