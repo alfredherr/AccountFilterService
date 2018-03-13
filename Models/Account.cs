@@ -10,13 +10,16 @@ namespace Account_Code_Filter_Service.Models
         {
             
         }
-        public Account(string accountNumber, string accountCode)
+        public Account(string accountNumber, string accountCode, bool addNotes)
         {
             AccountNumber = accountNumber;
             AccountCode = accountCode;
+            AddNotes = addNotes;
         }
         public string AccountNumber { get; }
         public string AccountCode { get; }
+        public bool AddNotes { get; }
+    
 
     }
 }

@@ -42,10 +42,11 @@ namespace Account_Code_Filter_Service.Models
                 {
                     var fields = line.Split("\t");
 
-                    if (fields.Length != 2)
-                        throw new Exception($"File {AccountsFile} doesn't have the right layout.");
+                    if (fields.Length < 3)
+                        throw new Exception($"File {AccountsFile} doesn't have the right layout. It has {fields.Length} fields, but need 3. ");
 
-                    accounts[fields[0]] = new Account(fields[0], fields[1]);
+                    bool note = fields.Length > 2 && fields[2] == "true";
+                    accounts[fields[0]] = new Account(fields[0], fields[1],note);
                 }
             }
             catch (Exception e)
