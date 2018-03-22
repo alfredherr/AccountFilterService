@@ -41,6 +41,30 @@ namespace Account_Code_Filter_Service.Controllers
             return accounts;
         }
 
+        [HttpGet]
+        [Route("xml")]
+        [Produces("application/xml")]
+        public AccountsResponse GetXml()
+        {
+            AccountsResponse accounts;
+            try
+            {
+                accounts = new AccountsResponse(_db.GetAll());
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.StackTrace);
+                throw;
+            }
+            return accounts;
+        }
+
+
+        [HttpGet("{accountNumber}.{format}"), FormatFilter]
+        public Account GetXml(string accountNumber)
+        {
+            return _db.Find(accountNumber);
+        }
 
         [HttpGet("{accountNumber}")]
         public Account Get(string accountNumber)

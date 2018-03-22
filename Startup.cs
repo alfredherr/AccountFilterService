@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.Net.Http.Headers;
 
 namespace Account_Code_Filter_Service
 {
@@ -30,6 +32,18 @@ namespace Account_Code_Filter_Service
             services.AddMvc();
             services.AddCors();
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddMvc(options =>
+                {
+                    options.FormatterMappings.SetMediaTypeMappingForFormat
+                        ("xml", MediaTypeHeaderValue.Parse("application/xml"));
+                    options.FormatterMappings.SetMediaTypeMappingForFormat
+                        ("config", MediaTypeHeaderValue.Parse("application/xml"));
+                    options.FormatterMappings.SetMediaTypeMappingForFormat
+                        ("js", MediaTypeHeaderValue.Parse("application/json"));
+                    options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
+                })
+                .AddXmlSerializerFormatters()
+                .AddXmlDataContractSerializerFormatters();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,9 +1,11 @@
 ﻿using System.Linq;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using Account_Code_Filter_Service.Controllers;
 
 namespace Account_Code_Filter_Service.Models
 {
+    [DataContract]
     public class Account
     {
         public Account()
@@ -16,9 +18,12 @@ namespace Account_Code_Filter_Service.Models
             AccountCode = accountCode;
             AddNotes = addNotes;
         }
-        public string AccountNumber { get; }
-        public string AccountCode { get; }
-        public bool AddNotes { get; }
+        [DataMember]
+        public string AccountNumber { get; set; }
+        [DataMember]
+        public string AccountCode { get; set; }
+        [DataMember]
+        public bool AddNotes { get; set; }
     
 
     }

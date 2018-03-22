@@ -2,10 +2,12 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization;
 using Microsoft.Extensions.Logging;
 
 namespace Account_Code_Filter_Service.Models
 {
+    [DataContract]
     public class AccountRepository : IAccountRepository
     {
         public ILogger _logger;
@@ -17,6 +19,8 @@ namespace Account_Code_Filter_Service.Models
             LoadAccountsDataStore();
 
         }
+
+        [DataMember]
         static ConcurrentDictionary<string, Account> _accounts = new ConcurrentDictionary<string, Account>();
 
         private void LoadAccountsDataStore()

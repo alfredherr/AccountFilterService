@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Account_Code_Filter_Service.BusinessLogic;
 using Account_Code_Filter_Service.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Logging;
 
 namespace Account_Code_Filter_Service.Controllers
@@ -21,7 +22,24 @@ namespace Account_Code_Filter_Service.Controllers
             _db = (AccountRepository) repo;
             _logger = logger;
         }
-
+        
+        [HttpGet]
+        [Route("xml")]
+        [Produces("application/xml")]
+        public AccountsResponse GetXml()
+        {
+            AccountsResponse accounts;
+            try
+            {
+                accounts = new AccountsResponse(_db.GetAll());
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.StackTrace);
+                throw;
+            }
+            return accounts;
+        }
         [HttpGet]
         public AccountsResponse Get()
         {
@@ -44,6 +62,25 @@ namespace Account_Code_Filter_Service.Controllers
             return _db.Find(accountNumber);
         }
 
+        [HttpGet("{accountNumber}.{format}"), FormatFilter]
+        public Account GetXml(string accountNumber)
+        {
+            return _db.Find(accountNumber);
+        }
+       
+        [Route("getbynumberxml")]
+        [Produces("application/xml")]
+        public Account GetWithParamsXml([FromQuery(Name = "account")] string number)
+        { 
+            if (string.IsNullOrEmpty(number) || _d qqqb.Find(number) == null)
+            {
+                return new Account($"{number} not found", "", false);
+            }
+            return _db.Find(number);
+            
+        }
+
+        
         [HttpGet]
         [Route("getbynumber")]
         public Account GetWithParams([FromQuery(Name = "account")] string number)

@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 
 namespace Account_Code_Filter_Service.Models
 {
+    [DataContract]
     public class AccountsResponse
     {
         public AccountsResponse()
@@ -13,6 +15,7 @@ namespace Account_Code_Filter_Service.Models
         {
             Accounts = accounts.ToArray();
         }
+        [DataMember]
         public Account[] Accounts { get; set; }
     }
 }
