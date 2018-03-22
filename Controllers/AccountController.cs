@@ -72,7 +72,7 @@ namespace Account_Code_Filter_Service.Controllers
         [Produces("application/xml")]
         public Account GetWithParamsXml([FromQuery(Name = "account")] string number)
         { 
-            if (string.IsNullOrEmpty(number) || _d qqqb.Find(number) == null)
+            if (string.IsNullOrEmpty(number) || _db.Find(number) == null)
             {
                 return new Account($"{number} not found", "", false);
             }
